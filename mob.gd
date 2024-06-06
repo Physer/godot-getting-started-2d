@@ -11,4 +11,4 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 
 func get_random_animation() -> String:
 	var animation_types: PackedStringArray = $AnimatedSprite2D.sprite_frames.get_animation_names()
-	return animation_types[randi() & animation_types.size()]
+	return animation_types[randi() % animation_types.size()]
