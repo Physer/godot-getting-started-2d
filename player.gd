@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	update_position(velocity, delta)
 	handle_animations(velocity)
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	hide()
 	hit.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
